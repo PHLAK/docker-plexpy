@@ -8,7 +8,16 @@ Docker image for PlexPy monitoring server.
 
 ### Running the container
 
-    docker run -d -p 8181:8181 --name plexpy-server phlak/plexpy
+
+In order to persist configuration data when upgrading your running server container you should
+create a data-only container. This is not required but is _highly_ recommended.
+
+    docker create --name plexpy-data phlak/plexpy echo "Data-only container for PlexPy server"
+
+After the data-only container has been created run your server container with shared volumes from
+the data-only container:
+
+    docker run -d -p 8181:8181  --volumes-from plexpy-data --name plexpy-server phlak/plexpy
 
 
 ##### Optional 'docker run' Arguments
