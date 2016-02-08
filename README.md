@@ -10,14 +10,13 @@ Docker image for PlexPy monitoring server.
 
 
 In order to persist configuration data when upgrading your running server container you should
-create a data-only container. This is not required but is _highly_ recommended.
+create a named data volume. This is not required but is _highly_ recommended.
 
-    docker create --name plexpy-data phlak/plexpy echo "Data-only container for PlexPy server"
+    docker volume create --name plexpy-data
 
-After the data-only container has been created run your server container with shared volumes from
-the data-only container:
+After the data volume has been created run your server container with the mounted data volume:
 
-    docker run -d -p 8181:8181  --volumes-from plexpy-data --name plexpy-server phlak/plexpy
+    docker run -d -p 8181:8181  -v plexpy-data:/etc/plexpy --name plexpy-server phlak/plexpy
 
 
 ##### Optional 'docker run' Arguments
