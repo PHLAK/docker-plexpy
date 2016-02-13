@@ -8,9 +8,8 @@ Docker image for PlexPy monitoring server.
 
 ### Running the container
 
-
-In order to persist configuration data when upgrading your running server container you should
-create a named data volume. This is not required but is _highly_ recommended.
+In order to persist configuration data when upgrading your container you should create a named data
+volume. This is not required but is _highly_ recommended.
 
     docker volume create --name plexpy-data
 
