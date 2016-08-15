@@ -3,7 +3,7 @@ docker-plexpy
 
 Docker image for PlexPy monitoring server.
 
-[![](https://badge.imagelayers.io/phlak/plexpy:latest.svg)](https://imagelayers.io/?images=phlak/plexpy:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/phlak/plexpy.svg)](http://microbadger.com/#/images/phlak/plexpy "Get your own image badge on microbadger.com")
 
 
 ### Running the container
