@@ -2,7 +2,7 @@ FROM alpine:3.4
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define PlexPy version
-ENV PLEXPY_VERSION 1.4.15
+ENV PLEXPY_VERSION 1.4.16
 
 # Create PlexPy directories
 RUN mkdir -pv /opt/plexpy /etc/plexpy
