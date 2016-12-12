@@ -22,6 +22,10 @@ After the data volume has been created run your server container with the mounte
 `--restart always` - Always restart the container regardless of the exit status. See the Docker
                      [restart policies](https://goo.gl/OI87rA) for additional details.
 
+`-e TZ=America/Phoenix` - Set the timezone for your server. You can find your timezone in this
+                          [list of timezones](https://goo.gl/uy1J6q). Use the (case sensitive)
+                          value from the `TZ` column. If left unset, timezone will be UTC.
+
 Troubleshooting
 ---------------
 

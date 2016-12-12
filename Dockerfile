@@ -14,7 +14,7 @@ RUN apk add --update python && rm -rf /var/cache/apk/*
 ENV TARBALL_URL https://api.github.com/repos/drzoidberg33/plexpy/tarball/v${PLEXPY_VERSION}
 
 # Download and extract PlexPy archive
-RUN apk add --update ca-certificates tar wget \
+RUN apk add --update ca-certificates tar tzdata wget \
     && wget -qO- ${TARBALL_URL} | tar -xzv --strip-components=1 -C /opt/plexpy \
     && apk del tar wget && rm -rf /var/cache/apk/*
 
