@@ -2,7 +2,7 @@ FROM alpine:3.5
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define PlexPy version
-ENV PLEXPY_VERSION 1.4.16
+ARG PLEXPY_VERSION=1.4.16
 
 # Create PlexPy directories
 RUN mkdir -pv /opt/plexpy /etc/plexpy
@@ -14,7 +14,7 @@ RUN adduser -DHs /sbin/nologin plexpy
 RUN apk add --update python && rm -rf /var/cache/apk/*
 
 # Set PlexPy archive URL
-ENV TARBALL_URL https://api.github.com/repos/drzoidberg33/plexpy/tarball/v${PLEXPY_VERSION}
+ARG TARBALL_URL=https://api.github.com/repos/drzoidberg33/plexpy/tarball/v${PLEXPY_VERSION}
 
 # Download and extract PlexPy archive
 RUN apk add --update ca-certificates tar tzdata wget \
