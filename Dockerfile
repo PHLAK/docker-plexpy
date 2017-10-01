@@ -2,7 +2,7 @@ FROM alpine:3.6
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define PlexPy version
-ARG PLEXPY_VERSION=1.4.22
+ARG PLEXPY_VERSION=1.4.23
 
 # Create PlexPy directories
 RUN mkdir -pv /opt/plexpy /etc/plexpy
